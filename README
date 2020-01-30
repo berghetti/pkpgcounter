@@ -1,3 +1,12 @@
+# pequena alteração do codigo original disponibilizado em http://www.pykota.com/,
+# no modulo pclxl.py (linha 613) , ao qual não estava efetuando a contagem de paginas corretas com relação 
+# ao numero de cópias quando o arquivo possuia apenas uma pagina de tamanho.
+
+# minor change to the original code available at http://www.pykota.com/,
+# in the pclxl.py module (line 613), which was not counting the correct pages with respect to
+# the number of copies when the file had only one page in size
+
+
 # $Id: README 375 2007-12-09 15:00:13Z jerome $
 
 pkpgcounter : a generic Page Description Language parser
