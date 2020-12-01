@@ -169,7 +169,7 @@ class Parser(pdlparser.PDLParser) :
                         self.pages[pagecount]["copies"] = number
                         
             elif line.startswith("<</NumCopies"):
-               # handle driver HP color laserjet 2500 PS from windows
+               # handle driver microsoft generic PS from windows
                 try:
                     number = int(filter(str.isdigit, line))
                 except:
