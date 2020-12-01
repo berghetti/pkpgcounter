@@ -167,6 +167,17 @@ class Parser(pdlparser.PDLParser) :
                 else :    
                     if number > self.pages[pagecount]["copies"] :
                         self.pages[pagecount]["copies"] = number
+                        
+            elif line.startswith("<</NumCopies"):
+               # handle driver HP color laserjet 2500 PS from windows
+                try:
+                    number = int(filter(str.isdigit, line))
+                except:
+                    pass
+                else:
+                    if number > self.pages[pagecount]["copies"] :
+                        self.pages[pagecount]["copies"] = number
+                        
             previousline = line
             
         # extract max number of copies to please the ghostscript parser, just    
